@@ -1,0 +1,5 @@
+Build/*/**
+libusb-1.0.24/**
+dfu-util-0.10/**
+
+!**/Build/bin/**

@@ -695,6 +695,7 @@ status_again:
 		break;
 
 	case MODE_DOWNLOAD:
+		/*
 		if (((file.idVendor  != 0xffff && file.idVendor  != runtime_vendor) ||
 		     (file.idProduct != 0xffff && file.idProduct != runtime_product)) &&
 		    ((file.idVendor  != 0xffff && file.idVendor  != dfu_root->vendor) ||
@@ -705,6 +706,7 @@ status_again:
 				runtime_vendor, runtime_product,
 				dfu_root->vendor, dfu_root->product);
 		}
+		*/
 		if (dfuse_device || dfuse_options || file.bcdDFU == 0x11a) {
 		        if (dfuse_do_dnload(dfu_root, transfer_size, &file,
 							dfuse_options) < 0)

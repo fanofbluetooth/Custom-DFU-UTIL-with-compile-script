@@ -17,8 +17,8 @@ AC_PROG_CC
 # On FreeBSD the libusb-1.0 is called libusb and resides in system location
 AC_CHECK_LIB([usb], [libusb_init],, [native_libusb=no],)
 AS_IF([test x$native_libusb = xno], [
-    PKG_CHECK_MODULES([USB], [libusb-1.0 >= 1.0.0],,
-        AC_MSG_ERROR([*** Required libusb-1.0 >= 1.0.0 not installed ***]))
+#     PKG_CHECK_MODULES([USB], [libusb-1.0 >= 1.0.0],,
+#         AC_MSG_ERROR([*** Required libusb-1.0 >= 1.0.0 not installed ***]))
 ])
 
 LIBS="$LIBS $USB_LIBS"
